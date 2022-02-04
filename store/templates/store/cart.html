@@ -4,3 +4,49 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
 
+{% block content %}
+    <div class="row row-cart ">
+
+        <div class="col-lg-12">
+            <div class="cart-cont">
+                <div class="row cart-row1">
+                    <div class="col-lg-6">
+                        <h3>Shopping Cart</h3>
+                    </div>
+                    <div class="col-lg-6 sml-h3">
+                        <h3 class="sml-h3" style="float: right"><small>price</small></h3>
+                    </div>
+                </div>
+                <hr>
+                
+                <div class="row">
+                     <div class="col-lg-3">
+                          <img class="cart-itm-img" src="{% static 'images/stockimg2.png' %}">
+                     </div>
+                     <div class="col-lg-6">
+                         <div class="row">
+                             <h3 class="h3">Xbox Core Wireless Controller – Pulse Red</h3>
+                         </div>
+                         <div class="row">
+                             <h4>Qty: </h4>
+                             <button   type="submit">
+                                 +
+                            </button>
+                            <h4>1</h4>
+                             <button    type="submit">
+                                 -
+                            </button>
+                         </div>
+                     </div>
+                    <div class="col-lg-3">
+                        <h3 style="display: inline-block; float: right" ><strong>$200</strong></h3>
+                     </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+{% endblock content %}
