@@ -20,39 +20,46 @@
 
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="{% url 'store' %}">Ecom</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'store' %}">Ecom</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'store' %}">Store <span class="sr-only">(current)</span></a>
-              </li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'store' %}">Store <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
 
-            </ul>
 
-            <div class="form-inline my-2 my-lg-0">
 
-                <a href="{% url 'cart' %}">
-                    <img  id="fav-icon" src="{% static 'images/favorites2.png' %}">
-                </a>
 
-                <a href="{% url 'cart' %}">
-                    <img  id="cart-icon" src="{% static 'images/cart2.png' %}">
-                </a>
-               <p id="cart-total">0</p>
-                    <img  id="user-icon" src="{% static 'images/user.png' %}">
-                <a href="#" >
+        <div class="form-inline my-2 my-lg-0">
 
-                </a>
-            </div>
 
-          </div>
+            <button id="s-btn"  type="submit">
+                <img  id="search-icon" src="{% static 'images/search.png' %}">
+            </button>
+
+            <a href="{% url 'cart' %}">
+                <img  id="fav-icon" src="{% static 'images/favorites2.png' %}">
+            </a>
+
+            <a href="{% url 'cart' %}">
+                <img  id="cart-icon" src="{% static 'images/cart2.png' %}">
+            </a>
+           <p id="cart-total">0</p>
+                <img  id="user-icon" src="{% static 'images/user.png' %}">
+            <a href="#" >
+
+            </a>
+        </div>
+
+      </div>
     </nav>
-    <hr>
+
     <div class="container">
         <br>
         {% block content %}

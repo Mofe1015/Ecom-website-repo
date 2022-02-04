@@ -6,27 +6,58 @@ h1,h2,h3,h4,h5,h6{
 	color:hsl(0, 0%, 30%);
 }
 
+.h7{
+    font-size: 25px;
+}
+.h3{
+    font-size: 25px;
+}
 .box-element{
 	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
 	background-color: #fff;
 	border-radius: 4px;
 	padding: 10px;
+	height:150px;
 }
 
+.box-cont{
+    display: inline-block;
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+}
+.banner-cont{
+    display: inline-block;
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 30px;
+	padding: 0px;
+	margin-bottom:40px;
+}
+.product{
+	border-radius: 0 0 4px 4px;
+}
+
+
 .thumbnail{
+    padding:10px;
 	width: 100%;
-	height: 200px;
+	height: 250px;
 	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
     -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
     box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
 }
 
-.product{
-	border-radius: 0 0 4px 4px;
+.bannerimg{
+    width: 1500px;
+    height: 300px;
+    display: inline-block;
 }
 
+
 .bg-dark{
-    background-color:  black !important;
+    background-color: black!important;
 }
 
 #cart-icon{
@@ -42,6 +73,7 @@ h1,h2,h3,h4,h5,h6{
 	height:25px;
 	display: inline-block;
 	margin-right: 15px;
+	margin-left: 15px;
 }
 #user-icon{
     width:25px;
@@ -49,9 +81,26 @@ h1,h2,h3,h4,h5,h6{
 	display: inline-block;
 	margin-right: 15px;
 }
+
+#search-icon{
+    width:25px;
+    height:25px;
+	display: inline-block;
+}
+
+#s-btn {
+  background-color: black;
+  border: none;
+  margin-right: 30px;
+
+}
+
+
+
+
+
 #cart-total{
 	display: block;
-
 	color:#fff;
 	background-color: grey;
 	width: 15px;
@@ -63,6 +112,11 @@ h1,h2,h3,h4,h5,h6{
 	margin-right: 30px;
 }
 
+.mr-sm-2{
+    width:250px !important ;
+
+
+}
 . col-lg-4 , . col-lg-6 , . col-lg-8 , . col-lg-12 {
 	margin-top: 10px;
 }
@@ -113,4 +167,17 @@ h1,h2,h3,h4,h5,h6{
 
 .hidden{
 	display: none!important;
+}
+.row{
+    margin: 0px
+    max-width: 100% !important;
+
+}
+.container{
+    max-width: 90% !important;
+
+}
+.col-lg-4{
+    max-width: 25% !important;
+    padding-top: 20px !important;
 }
