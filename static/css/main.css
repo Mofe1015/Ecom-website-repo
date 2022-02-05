@@ -1,5 +1,7 @@
 body{
 	background-color: hsl(0, 0%, 98%);
+	margin: 0px;
+	padding: 0px;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -23,6 +25,26 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 470;
     margin-right: 10px;
 }
+
+.order-summary-txt{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.check-out-sum-txt{
+     margin-left: 20px;
+     font-size: 15px;
+     font-weight: 490;
+}
+
+.check-out-sum-prc{
+     margin-top: 15px;
+     margin-left: 35px;
+     font-size: 15px;
+     font-weight: 500;
+}
 .sml-h3{
     margin-top: 15px !important;
     margin-bottom: -15px !important;
@@ -44,6 +66,15 @@ h1,h2,h3,h4,h5,h6{
 	padding: 10px;
 
 }
+.checkout-cont{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+	max-width: 100%;
+	margin-left: 10px;
+
+}
 
 .dropdown-cont{
     max-width:50px;
@@ -55,6 +86,7 @@ h1,h2,h3,h4,h5,h6{
 	background-color: #fff;
 	border-radius: 10px;
 	padding: 20px;
+	margin-left: 20px;
 }
 .banner-cont{
     display: inline-block;
@@ -85,9 +117,20 @@ h1,h2,h3,h4,h5,h6{
     padding:10px;
 	width: 200px;
 	height: 150px;
-
 }
-
+.cart-itm-img-sum{
+    padding:10px;
+	width: 120px;
+	height: 95px;
+}
+.sum-col{
+    margin:0px !important;
+    padding:0px !important;
+}
+.sum-col1{
+    margin-left:0px !important;
+    padding:0px !important;
+}
 .bannerimg{
     width: 1500px;
     height: 300px;
@@ -265,13 +308,19 @@ h1,h2,h3,h4,h5,h6{
 
 }
 .row-cart{
-    max-width: 75% !important;
-
+    max-width: 85% !important;
     margin:auto !important;
+}
+
+.row-checkout{
+    max-width: 85% !important;
 
 }
+
 .container{
-    max-width: 90% !important;
+    max-width: 99% !important;
+    padding: 0px !important;
+    margin: 0px !important;
 
 }
 .col-lg-4{
