@@ -11,10 +11,17 @@ h1,h2,h3,h4,h5,h6{
 }
 .h3{
     font-size: 25px;
+    margin: 0px;
+
 }
 
-.cart-row1{
-
+.prc-fnt{
+    font-size: 20px;
+}
+.prc-fnt1{
+    font-size: 20px;
+    font-weight: 470;
+    margin-right: 10px;
 }
 .sml-h3{
     margin-top: 15px !important;
@@ -56,6 +63,9 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 30px;
 	padding: 0px;
 	margin-bottom:40px;
+}
+.ttl-cont{
+
 }
 .product{
 	border-radius: 0 0 4px 4px;
@@ -153,10 +163,25 @@ h1,h2,h3,h4,h5,h6{
     margin-right: 10px;
 }
 .qty-row{
+    margin: 0px;
     margin-top:50px;
     margin-bottom:-50px;
+    background-color: #E3E6E6;
+	border-radius: 8px;
+	padding: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+	width: 85px;
+	max-height: 35px;
+
 }
 
+.itm-nm-row{
+    margin: 0px;
+    padding-right: 0px;
+	padding-left: 0px;
+}
+}
 .mr-sm-2{
     width:250px !important ;
 
@@ -191,18 +216,39 @@ h1,h2,h3,h4,h5,h6{
 
 .quantity{
 	display: inline-block;
-	font-weight: 700;
-	padding-right:10px;
-
-
+	font-weight: 470;
+	font-size: 20px;
+	text-align: center;
+	padding-right:0px;
+	padding-left:5px;
 }
 
+.quantity1{
+
+    display: inline-block;
+	font-weight: 470;
+	font-size: 20px;
+	text-align: center;
+
+    padding-right:2.5px;
+}
+.quantity2{
+
+    display: inline-block;
+	font-weight: 470;
+	font-size: 20px;
+	text-align: center;
+    padding-right:5px;
+    padding-left:2.5px;
+}
 .chg-quantity{
 	width: 12px;
 	cursor: pointer;
 	display: block;
-	margin-top: 5px;
+	margin-top: 2px;
 	transition:.1s;
+	align: center;
+
 }
 
 .chg-quantity:hover{
@@ -231,4 +277,7 @@ h1,h2,h3,h4,h5,h6{
 .col-lg-4{
     max-width: 25% !important;
     padding-top: 20px !important;
+}
+.chk-out{
+    width: 200px !important;
 }
