@@ -5,15 +5,67 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
 
 {% block content %}
+
     <div class="row">
-        <div class=" col-lg-9  ">
+        <div class=" col-lg-7  ">
             <div class="checkout-cont">
-                <h3>PERSONAL DETAILS AND SHIPPING ADDRESS</h3>
+                <h3>Personal details and Address</h3>
+                <form>
+                    {%csrf_token %}
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label >Full name (First and Last name)</label>
+                                <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter Full Name">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Country</label>
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                           <div class="form-group">
+                                <label for="exampleInputEmail1">State</label>
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="State">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Address</label>
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Street address, Building, Apartment ">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Zip Code</label>
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Zip Code">
+                            </div>
+                        </div>
+                    </div>
+
+                     <button type="submit" class="btn btn-secondary proceed-payment">Save and proceed to payment</button>
+                </form>
+
             </div>
 
         </div>
 
-        <div class=" col-lg-3   ">
+        <div class=" col-lg-5   ">
            <div class="checkout-cont">
                <div class="row">
                    <h3 class="order-summary-txt">Your order summary</h3>
@@ -25,13 +77,19 @@
                            <img class="cart-itm-img-sum" src="{% static 'images/stockimg2.png' %}">
                        </div>
                    </div>
-                   <div class="col-lg-9 ">
+                   <div class="col-lg-6 ">
                        <div class="row sum-col">
                             <h3  class="check-out-sum-txt">Xbox Core Wireless Controller – Pulse Red</h3>
                        </div>
+                       <div class="row sum-col">
+                            <h3  class="check-out-sum-txt">Qty: 1</h3>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 sum-col">
                        <div class="row">
                             <h3  class="check-out-sum-prc">$49.00</h3>
                        </div>
+
                    </div>
 
                </div>

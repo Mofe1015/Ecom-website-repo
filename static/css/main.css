@@ -34,14 +34,15 @@ h1,h2,h3,h4,h5,h6{
 
 }
 .check-out-sum-txt{
-     margin-left: 20px;
+     margin-left: 25px;
      font-size: 15px;
      font-weight: 490;
+     margin-top: 15px;
 }
 
 .check-out-sum-prc{
      margin-top: 15px;
-     margin-left: 35px;
+     margin-left: 70px;
      font-size: 15px;
      font-weight: 500;
 }
@@ -330,4 +331,8 @@ h1,h2,h3,h4,h5,h6{
 .chk-out{
     width: 200px !important;
     color: white !important;
+}
+.proceed-payment{
+    margin-left: 38% !important;
+
 }
