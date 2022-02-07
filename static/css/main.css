@@ -115,9 +115,10 @@ h1,h2,h3,h4,h5,h6{
 }
 .stock-img{
 
-    width: 100%;
-	height: 100%;
+    width: 88%;
+	height: 88%;
 	align: center;
+	margin: 5%;
 }
 
 .cart-itm-img{
@@ -344,4 +345,15 @@ h1,h2,h3,h4,h5,h6{
 .proceed-payment{
     margin-left: 38% !important;
 
+}
+.add-cart-cont{
+    align:bottom !important;
+    float:bottom !important;
+    width:100%;
+    height:100%;
+}
+.add-cart-btn{
+
+
+    float:bottom !important;
 }

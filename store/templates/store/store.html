@@ -6,62 +6,27 @@
 
     <div class="box-cont">
         <h7 class="h7"><strong>Most popular products </strong></h7>
-        <div class="row">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-lg-4 ">
+                       <a href="#">
+                           <div class="thumbnail" >
+                               <img class="stock-img" src="{{product.image.url}}">
+                           </div>
 
-            <div class="col-lg-4 ">
-               <a href="#">
-                   <div class="thumbnail" >
-                       <img class="stock-img" src="{% static 'images/stockimg2.png' %}">
+                           <div class="box-element product">
+                                <h3 class="h3">{{product.name}}</h3>
+                                <hr>
+                                <div class="add-cart-cont" >
+                                    <a href="{% url 'cart' %}"><button class="btn btn-outline-secondary add-cart-btn">Add to cart</button></a>
+                                    <h4 style="display: inline-block; float: right " >${{product.price}}</h4>
+                                </div>
+
+                           </div>
+                       </a>
                    </div>
+                {% endfor %}
 
-                   <div class="box-element product">
-                        <h3 class="h3">Xbox Core Wireless Controller – Pulse Red</h3>
-                        <hr>
-                        <a href="{% url 'cart' %}"><button class="btn btn-outline-secondary">Add to cart</button></a>
-                        <h4 style="display: inline-block; float: right " >$200</h4>
-                   </div>
-               </a>
-           </div>
-
-           <div class="col-lg-4 ">
-               <a href="#">
-                   <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
-                   <div class="box-element product">
-                        <h3 class="h3">Product Name....</h3>
-                        <hr>
-                        <button class="btn btn-outline-secondary">Add to cart</button>
-
-                        <h4 style="display: inline-block; float: right " >$0.00</h4>
-                   </div>
-               </a>
-           </div>
-
-           <div class="col-lg-4 " >
-               <a href="#">
-                   <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
-                    <div class="box-element product">
-                        <h3 class="h3">Product Name....</h3>
-                        <hr>
-                        <button class="btn btn-outline-secondary">Add to cart</button>
-
-                        <h4 style="display: inline-block; float: right " >$0.00</h4>
-                    </div>
-               </a>
-           </div>
-
-            <div class="col-lg-4 ">
-               <a href="#">
-                   <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
-                    <div class="box-element product">
-
-                        <h3 class="h3">Product Name.... </h3>
-                       <hr>
-                        <button class="btn btn-outline-secondary">Add to cart</button>
-
-                        <h4 style="display: inline-block; float: right " >$0.00</h4>
-                    </div>
-               </a>
-           </div>
 
         </div>
     </div>
