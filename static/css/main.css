@@ -113,6 +113,12 @@ h1,h2,h3,h4,h5,h6{
     -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
     box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
 }
+.stock-img{
+
+    width: 100%;
+	height: 100%;
+	align: center;
+}
 
 .cart-itm-img{
     padding:10px;
@@ -215,7 +221,7 @@ h1,h2,h3,h4,h5,h6{
 	padding: 5px;
 	padding-right: 0px;
 	padding-left: 0px;
-	width: 85px;
+	width: 90px;
 	max-height: 35px;
 
 }
@@ -289,9 +295,12 @@ h1,h2,h3,h4,h5,h6{
 	width: 12px;
 	cursor: pointer;
 	display: block;
-	margin-top: 2px;
+	margin-top:0px;
+	margin-bottom:2px;
+	margin-left:3px;
 	transition:.1s;
 	align: center;
+
 
 }
 
