@@ -16,7 +16,11 @@
                            </div>
 
                            <div class="box-element product">
-                                <h3 class="h3">{{product.name}}</h3>
+                               <div class="row h3">
+                                   <h3 class="h3">{{product.productnm}}</h3>
+                               </div>
+
+
                                 <hr>
                                 <div class="add-cart-cont" >
                                     <a href="{% url 'cart' %}"><button class="btn btn-outline-secondary add-cart-btn">Add to cart</button></a>
