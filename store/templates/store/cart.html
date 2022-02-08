@@ -18,18 +18,20 @@
                     </div>
                 </div>
                 <hr>
-                
-                <div class="row">
+                {% for item in items %}
+
+
+                    <div class="row">
                      <div class="col-lg-3">
-                          <img class="cart-itm-img" src="{% static 'images/stockimg2.png' %}">
+                          <img class="cart-itm-img" src="{{item.product.image.url}}">
                      </div>
                      <div class="col-lg-6">
                          <div class="row itm-nm-row">
-                             <h3 style="display: inline-block; float: left " class="h3">Xbox Core Wireless Controller – Pulse Red</h3>
+                             <h3 style="display: inline-block; float: left " class="h3">{{item.product.name}}</h3>
                          </div>
                          <div class="row  qty-row" >
                                 <h3 class="quantity">Qty:</h3>
-                                <h3 class="quantity1"> 10</h3>
+                                <h3 class="quantity1">0{{item.quantity}} </h3>
                                 <div class="quantity2">
                                     <img class="chg-quantity" src="{% static  'images/up.png' %}">
 
@@ -38,20 +40,21 @@
                          </div>
                      </div>
                     <div class="col-lg-3 prc-cont">
-                        <h3 style="display: inline-block; float: right " class="prc-fnt" ><strong>$49.00</strong></h3>
+                        <h3 style="display: inline-block; float: right " class="prc-fnt" ><strong>${{item.ItemTttl}}</strong></h3>
                      </div>
-                </div>
-                <hr>
+                    </div>
+                     <hr>
+                {% endfor %}
 
                 <div class="row ttl-cont">
                     <div class="col-lg-6 ">
                         <a class="btn btn-secondary btn-sm chk-out" href="{% url 'checkout' %}">Proceed to checkout</a>
 
                     </div>
-                    <div class="col-lg-6">
-                        <h3 style="display: inline-block; float: right " class="prc-fnt"><strong> $49.00</strong></h3>
-                        <h3 style="display: inline-block; float: right " class="prc-fnt1" >Subtotal (1 item):</h3>
 
+                    <div class="col-lg-6">
+                        <h3 style="display: inline-block; float: right " class="prc-fnt"><strong> ${{order.CartTtl}}</strong></h3>
+                        <h3 style="display: inline-block; float: right " class="prc-fnt1" >Subtotal ({{order.CartItmTtl}} item):</h3>
                     </div>
 
                 </div>
