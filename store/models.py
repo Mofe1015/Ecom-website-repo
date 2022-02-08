@@ -23,7 +23,7 @@ class Product(models.Model):
         return self.name
 
     @property
-    def productnm(self):
+    def ProductNm(self):
         x = self.name
         if len(x) > 25:
             x = x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] + x[10] \

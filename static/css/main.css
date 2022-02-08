@@ -101,7 +101,9 @@ h1,h2,h3,h4,h5,h6{
 
 }
 .product{
-	border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px !important;
+	background-color: white !important;
+	max-height: 80% !important;
 }
 
 
@@ -123,7 +125,7 @@ h1,h2,h3,h4,h5,h6{
 .stock-img{
 
     width: 70%;
-	height: 70%;
+	height: 80%;
 
 	margin-left: 20%;
 	margin-top: 10%;
@@ -355,17 +357,21 @@ h1,h2,h3,h4,h5,h6{
 
 }
 .add-cart-cont{
-    align:bottom !important;
-    float:bottom !important;
+    margin-top: 5%;
     width:100%;
     height:100%;
 }
 .add-cart-btn{
 
-
+    background-color: #E3E6E6 !important;
     float:bottom !important;
-}
+    border: 0px;
 
+    }
 
+.add-cart-btn:hover{
+        background-color: grey !important;
+        color: white !important;
+    }
 
 
