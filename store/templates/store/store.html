@@ -8,10 +8,11 @@
         <h7 class="h7"><strong>Most popular products </strong></h7>
             <div class="row">
                 {% for product in products %}
-                    <div class="col-lg-4 ">
+
+                    <div class="col-lg-4  ">
                        <a href="#">
                            <div class="thumbnail" >
-                               <img class="stock-img" src="{{product.image.url}}">
+                               <img class="stock-img" src="{{product.imgURL}}">
                            </div>
 
                            <div class="box-element product">
