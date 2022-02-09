@@ -70,29 +70,30 @@
                <div class="row">
                    <h3 class="order-summary-txt">Your order summary</h3>
                </div>
+               {% for item in items %}
+                   <div class="row">
+                       <div class="col-lg-3 sum-col">
+                           <div class="sum-col">
+                               <img class="cart-itm-img" src="{{item.product.image.url}}">
+                           </div>
+                       </div>
+                       <div class="col-lg-6 ">
+                           <div class="row sum-col">
+                                <h3  class="check-out-sum-txt">{{item.product.name}}</h3>
+                           </div>
+                           <div class="row sum-col">
+                                <h3  class="check-out-sum-txt">Qty: 0{{item.quantity}}</h3>
+                           </div>
+                       </div>
+                       <div class="col-lg-3 sum-col">
+                           <div class="row">
+                                <h3  class="check-out-sum-prc">${{item.product.price}}</h3>
+                           </div>
 
-               <div class="row">
-                   <div class="col-lg-3 sum-col">
-                       <div class="sum-col">
-                           <img class="cart-itm-img-sum" src="{% static 'images/stockimg2.png' %}">
-                       </div>
-                   </div>
-                   <div class="col-lg-6 ">
-                       <div class="row sum-col">
-                            <h3  class="check-out-sum-txt">Xbox Core Wireless Controller – Pulse Red</h3>
-                       </div>
-                       <div class="row sum-col">
-                            <h3  class="check-out-sum-txt">Qty: 1</h3>
-                       </div>
-                   </div>
-                   <div class="col-lg-3 sum-col">
-                       <div class="row">
-                            <h3  class="check-out-sum-prc">$49.00</h3>
                        </div>
 
                    </div>
-
-               </div>
+               {%endfor%}
 
 
             </div>
