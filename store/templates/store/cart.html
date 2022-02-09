@@ -40,7 +40,7 @@
                          </div>
                      </div>
                     <div class="col-lg-3 prc-cont">
-                        <h3 style="display: inline-block; float: right " class="prc-fnt" ><strong>${{item.ItemTttl}}</strong></h3>
+                        <h3 style="display: inline-block; float: right " class="prc-fnt" ><strong>${{item.ItemTttl|floatformat:2}}</strong></h3>
                      </div>
                     </div>
                      <hr>
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <h3 style="display: inline-block; float: right " class="prc-fnt"><strong> ${{order.CartTtl}}</strong></h3>
+                        <h3 style="display: inline-block; float: right " class="prc-fnt"><strong> ${{order.CartTtl|floatformat:2}}</strong></h3>
                         <h3 style="display: inline-block; float: right " class="prc-fnt1" >Subtotal ({{order.CartItmTtl}} items):</h3>
                     </div>
 
