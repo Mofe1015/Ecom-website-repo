@@ -74,7 +74,7 @@
                    <div class="row">
                        <div class="col-lg-3 sum-col">
                            <div class="sum-col">
-                               <img class="cart-itm-img" src="{{item.product.image.url}}">
+                               <img class="cart-itm-img-sum" src="{{item.product.image.url}}">
                            </div>
                        </div>
                        <div class="col-lg-6 ">
@@ -87,16 +87,27 @@
                        </div>
                        <div class="col-lg-3 sum-col">
                            <div class="row">
-                                <h3  class="check-out-sum-prc">${{item.product.price}}</h3>
+                                <h3  class="check-out-sum-prc">${{item.ItemTttl}}</h3>
                            </div>
 
                        </div>
 
                    </div>
                {%endfor%}
+               <div class="row ttl-cont-sum">
+                    <div class="col-lg-6 ">
+                        <a class="btn btn-secondary btn-sm chk-out-2" href="{% url 'cart' %}">Back to cart</a>
 
+                    </div>
 
-            </div>
+                    <div class="col-lg-6">
+                        <h3 style="display: inline-block; float: right " class="prc-fnt"><strong> ${{order.CartTtl}}</strong></h3>
+                        <h3 style="display: inline-block; float: right " class="prc-fnt1" >Subtotal ({{order.CartItmTtl}} items):</h3>
+                    </div>
+
+                </div>
+
+           </div>
         </div>
     </div>
 

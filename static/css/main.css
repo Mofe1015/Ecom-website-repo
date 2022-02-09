@@ -97,8 +97,8 @@ h1,h2,h3,h4,h5,h6{
 	padding: 0px;
 	margin-bottom:40px;
 }
-.ttl-cont{
-
+.ttl-cont-sum{
+    margin-top: 15px !important;
 }
 .product{
 	border-radius: 0 0 4px 4px !important;
@@ -140,6 +140,7 @@ h1,h2,h3,h4,h5,h6{
     padding:10px;
 	width: 120px;
 	height: 95px;
+	margin-left: 25px;
 }
 .sum-col{
     margin:0px !important;
@@ -350,6 +351,10 @@ h1,h2,h3,h4,h5,h6{
 }
 .chk-out{
     width: 200px !important;
+    color: white !important;
+}
+.chk-out-2{
+    width: 150px !important;
     color: white !important;
 }
 .proceed-payment{
