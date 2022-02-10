@@ -27,7 +27,7 @@ function updateUserOrder(productId, action){
         headers:{
             'Content-Type':'application/json'
         },
-        body:JSON.stringify({'productId:',productId, 'action:', action})
+        body:JSON.stringify({'productId': productId, 'action': action})
     })
 
 }
