@@ -11,8 +11,23 @@ for(var i = 0; i < updateBts.length; i++){
         if (user === 'AnonymousUser'){
             console.log('not logged in')
         }else{
-            console.log('logged in and sending data ...')
+            updateUserOrder(productId, action)
         }
 
     })
+}
+
+function updateUserOrder(productId, action){
+    console.log('User is logged in, sending data ...')
+
+    var url = '/update_item/'
+
+    fetch(url, {
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({'productId:',productId, 'action:', action})
+    })
+
 }
