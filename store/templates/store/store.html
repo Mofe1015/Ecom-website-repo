@@ -23,7 +23,7 @@
 
                                 <hr>
                                 <div class="add-cart-cont" >
-                                    <a href="{% url 'cart' %}"><button class="btn btn-outline-secondary add-cart-btn">Add to cart</button></a>
+                                    <a  ><button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-cart-btn">Add to cart</button></a>
                                     <h4 style="display: inline-block; float: right " >${{product.price}}</h4>
                                 </div>
 
