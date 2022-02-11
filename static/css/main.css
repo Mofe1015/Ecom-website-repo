@@ -260,11 +260,11 @@ h1,h2,h3,h4,h5,h6{
 
 
 }
-. col-lg-4 , . col-lg-6 , . col-lg-8 , . col-lg-12 {
+.col-lg-4 , .col-lg-6 , .col-lg-8 , .col-lg-12 {
 	margin-top: 10px;
 }
 
-. btn {
+.btn {
 	border-radius: 0;
 }
 
@@ -322,7 +322,7 @@ h1,h2,h3,h4,h5,h6{
 	margin-bottom:2px;
 	margin-left:3px;
 	transition:.1s;
-	align: center;
+	
 
 
 }
@@ -336,10 +336,12 @@ h1,h2,h3,h4,h5,h6{
 	display: none!important;
 }
 .row{
-    margin: 0px
-    max-width: 100% !important;
-
+	max-width: 100% !important;
+	margin: 0px
 }
+ 
+    
+
 .row-cart{
     max-width: 85% !important;
     margin:auto !important;

@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render
 from .models import *
 from django.http import JsonResponse
@@ -33,7 +34,7 @@ def checkout(request):
     else:
         items = []
         order = {'CartTtl': 0, 'CartItmTtl': 0}
-    context = {'items': items, 'order': order}
+    context = {'items' :items, 'order' :order}
 
     return render(
         request, 'store/checkout.html', context
@@ -41,4 +42,10 @@ def checkout(request):
 
 
 def updateItem(request):
+    data = json.loads(request.body)
+    productId = data['productId']
+    action = data['action']
+
+    print('Action: , action')
+    print('productId:', productId )
     return JsonResponse('Item was added to cart', safe=False)
