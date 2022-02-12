@@ -6,8 +6,21 @@ from django.http import JsonResponse
  
 
 def store(request):
+
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        items = order.orderitem_set.all()
+        cartItems = order.CartItmTtl
+    else: 
+        items = []
+        order = {'CartTtl': 0, 'CartItmTtl': 0}
+        cartItems = order['CartItmTtl']
+
     products = Product.objects.all()
-    context = {'products': products}
+    context = {'products': products, 'items' :items, 'order' :order, 'cartItems' : cartItems}
+    
+    
     return render(
         request, 'store/store.html', context
     )

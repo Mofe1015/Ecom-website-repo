@@ -251,6 +251,7 @@ h1,h2,h3,h4,h5,h6{
 
 .itm-nm-row{
     margin: 0px;
+	margin-bottom: 70px !important;
     padding-right: 0px;
 	padding-left: 0px;
 

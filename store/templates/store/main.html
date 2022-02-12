@@ -69,7 +69,7 @@
             <a href="{% url 'cart' %}">
                 <img  id="cart-icon" src="{% static 'images/cart2.png' %}">
             </a>
-           <p id="cart-total">0</p>
+           <p id="cart-total">{{order.CartItmTtl}}</p>
 
             <a href="#" >
                 <img  id="user-icon" src="{% static 'images/user.png' %}">
