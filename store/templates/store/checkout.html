@@ -7,8 +7,8 @@
 {% block content %}
 
     <div class="row">
-        <div class=" col-lg-7  ">
-            <div class="checkout-cont">
+        <div id="shipping-info" class=" col-lg-7  ">
+            <div  class="checkout-cont">
                 <h3>Personal details and Address</h3>
                 <form>
                     {%csrf_token %}
@@ -112,5 +112,11 @@
            </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var shipping = '{{order.shipping}}'
+        if(shipping == 'False'){
+            document.getElementById('shipping-info').innerHTML=''
+        }
 
+    </script>
 {% endblock %}
