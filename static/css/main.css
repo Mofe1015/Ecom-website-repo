@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .prc-fnt-sum{
     font-size: 15px;
-    margin-right: 100px !important;
+    
 }
 .prc-fnt1-sum{
     font-size: 15px;
@@ -85,6 +85,17 @@ h1,h2,h3,h4,h5,h6{
 	padding: 10px;
 	max-width: 100%;
 	margin-left: 10px;
+
+}
+
+.payment-cont{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+	max-width: 100%;
+	margin-left: 10px;
+	margin-top: 20px;
 
 }
 
@@ -372,6 +383,7 @@ h1,h2,h3,h4,h5,h6{
     color: white !important;
 }
 .proceed-payment{
+	margin-top: 25px !important;
     margin-left: 38% !important;
 
 }
