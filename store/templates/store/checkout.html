@@ -17,13 +17,13 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <input required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label >Full name (First and Last name)</label>
-                                    <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter Full Name">
+                                    <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter Full Name" name="name">
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label for="inputAddress">Address</label>
-                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="addres">
                                       </div>
                                 </div>
                             </div>
@@ -41,18 +41,18 @@
                             <div class="row">
                                 <div class="form-group col-md-6">
                                   <label for="inputCity">City</label>
-                                  <input type="text" class="form-control" id="inputCity">
+                                  <input type="text" class="form-control" id="inputCity" name="city">
                                 </div>
                                 <div class="form-group col-md-4">
                                   <label for="inputState">State</label>
-                                  <select id="inputState" class="form-control">
+                                  <select id="inputState" class="form-control" name="state">
                                     <option selected>Choose...</option>
                                     <option>...</option>
                                   </select>
                                 </div>
                                 <div class="form-group col-md-2">
                                   <label for="inputZip">Zip</label>
-                                  <input type="text" class="form-control" id="inputZip">
+                                  <input type="text" class="form-control" id="inputZip" name="zip">
                                 </div>
                               </div>
         
@@ -66,9 +66,9 @@
                 </div>
             </div>
 
-            <div id="payment-id" class="payment-cont"> 
+            <div id="payment-id" class="payment-cont hidden"> 
                 <h3>Payment infomation</h3>
-                <form>
+                <form id="form2">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
@@ -123,7 +123,7 @@
                           <input type="text" class="form-control" id="inputZip" placeholder="xxx">
                         </div>
                     </div>
-                    <button id="" type="submit" class="btn btn-secondary proceed-payment">Place Order</button>
+                    <button id="make-payment"  class="btn btn-secondary proceed-payment">Place Order</button>
                     
                 </form>
             </div>
@@ -179,20 +179,78 @@
 
 
     <script type="text/javascript">
-        document.getElementById('payment-id').classList.add('hidden')
+        
         var shipping = '{{order.shipping}}'
+        var total = '{{order.CartItm|floatformat:2}}'
+
         if(shipping == 'False'){
             document.getElementById('shipping-info').innerHTML=''
         }
 
+    
         var form = document.getElementById('form')
+        var form2 = document.getElementById('shipping-info')
+        
+
         form.addEventListener('submit', function(e){
             e.preventDefault()
             console.log('form submitted...')
             document.getElementById('submit-form').classList.add('hidden')
             document.getElementById('payment-id').classList.remove('hidden')
-
         })
+    
+        document.getElementById('make-payment').addEventListener('click', function(e){
+            e.preventDefault()
+            submitformData()
+        })  
+
+        function submitformData(){
+            console.log('payment processing')
+            var userformdata = {
+                'name': null,
+                'email': null,
+                'total': total
+            }
+
+            var shippinginfo = {
+                'address': null,
+                'city': null,
+                'state': null,
+                'zip': null,
+            }
+
+            if(shipping != 'False'){
+                shippinginfo.address = form.addres.value
+                shippinginfo.city = form.city.value
+                shippinginfo.state = form.state.value
+                shippinginfo.zip = form.zip.value
+            }
+
+            
+            if(user != 'AnonymousUser'){
+                userformdata.name = form.name.value
+                userformdata.email = form.email.value
+                
+            }
+
+            var url = '/process_order/'
+            fetch(url,{
+                method: "POST",
+                headers:{
+                    'Content-Type' : 'application/json',
+                    'X-CSRFToken' : csrftoken
+                }, 
+                body:JSON.stringify({'form':userformdata, 'shipping':shippinginfo})
+            })
+            .then((response) => response.json())
+            .then ((data) => {
+                console.log('Success:', data);
+                alert('TRANSACTION COMPLETED')
+                window.location.href = "{% url 'store'%}"
+            })
+           
+        }
+
 
     </script>
 {% endblock %}

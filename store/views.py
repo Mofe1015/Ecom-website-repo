@@ -83,3 +83,6 @@ def updateItem(request):
 
     return JsonResponse('Item was added to cart', safe=False)
 
+def processOrder(request):
+    print('Data:', request.body)
+    return JsonResponse('PAYMENT COMPLETE', safe=False)
