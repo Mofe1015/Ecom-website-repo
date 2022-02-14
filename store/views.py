@@ -3,6 +3,7 @@ from sqlite3 import complete_statement
 from django.shortcuts import render
 from .models import *
 from django.http import JsonResponse
+import datetime
  
 
 def store(request):
@@ -85,4 +86,22 @@ def updateItem(request):
 
 def processOrder(request):
     print('Data:', request.body)
+    transaction_id = datetime.datetime.now().timestamp()
+    data = json.loads(request.body)
+
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        total = data['form']['total']
+        order.transaction_id = transaction_id
+        if float(total) == float(order.CartTtl):
+            order.complete = True
+        order.save()
+
+
+
+
+
+    else:
+        print('unregistered user')
     return JsonResponse('PAYMENT COMPLETE', safe=False)

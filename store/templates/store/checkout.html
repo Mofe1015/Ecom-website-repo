@@ -181,7 +181,7 @@
     <script type="text/javascript">
         
         var shipping = '{{order.shipping}}'
-        var total = '{{order.CartItm|floatformat:2}}'
+        var total = '{{order.CartTtl}}'
 
         if(shipping == 'False'){
             document.getElementById('shipping-info').innerHTML=''
