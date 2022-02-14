@@ -11,7 +11,7 @@
             <div class="">
                 <div  class="checkout-cont">
                     <h3>Personal details and Address</h3>
-                    <form>
+                    <form id="form">
                         {%csrf_token %}
                         <div class="row">
                             <div class="col-lg-6">
@@ -60,18 +60,73 @@
                         
     
                         
-                         <button type="submit" class="btn btn-secondary proceed-payment">Save and proceed to payment</button>
+                         <button id="submit-form" type="submit" class="btn btn-secondary proceed-payment">Save and proceed to payment</button>
                     </form>
     
                 </div>
             </div>
 
-            <div class="payment-cont"> 
+            <div id="payment-id" class="payment-cont"> 
                 <h3>Payment infomation</h3>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Card Number</label>
+                                <input type="" class="form-control" id="" aria-describedby="" placeholder="xxxx-xxxx-xxxx-xxxx">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label >Card Name</label>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter name on card">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                          <label for="inputCity">Year</label>
+                          <select id="inputState" class="form-control">
+                            <div>
+                                <option selected>YYYY</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                            </div>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputState">Month</label>
+                          <select id="inputState" class="form-control">
+                            <div>
+                                <option selected>MM</option>
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </div>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputZip">Code</label>
+                          <input type="text" class="form-control" id="inputZip" placeholder="xxx">
+                        </div>
+                    </div>
+                    <button id="" type="submit" class="btn btn-secondary proceed-payment">Place Order</button>
+                    
+                </form>
             </div>
-
-            
-
         </div>
 
         <div class=" col-lg-5   ">
@@ -121,11 +176,23 @@
            </div>
         </div>
     </div>
+
+
     <script type="text/javascript">
+        document.getElementById('payment-id').classList.add('hidden')
         var shipping = '{{order.shipping}}'
         if(shipping == 'False'){
             document.getElementById('shipping-info').innerHTML=''
         }
+
+        var form = document.getElementById('form')
+        form.addEventListener('submit', function(e){
+            e.preventDefault()
+            console.log('form submitted...')
+            document.getElementById('submit-form').classList.add('hidden')
+            document.getElementById('payment-id').classList.remove('hidden')
+
+        })
 
     </script>
 {% endblock %}

@@ -347,6 +347,7 @@ h1,h2,h3,h4,h5,h6{
 .hidden{
 	display: none!important;
 }
+
 .row{
 	max-width: 100% !important;
 	margin: 0px
@@ -377,14 +378,20 @@ h1,h2,h3,h4,h5,h6{
 .chk-out{
     width: 200px !important;
     color: white !important;
+	border-radius: 5px!important;
+
 }
 .chk-out-2{
     width: 150px !important;
     color: white !important;
+	border-radius: 5px!important;
+
 }
 .proceed-payment{
+	width: 250px !important;
 	margin-top: 25px !important;
-    margin-left: 38% !important;
+    margin-left: 35% !important;
+	border-radius: 5px!important;
 
 }
 .add-cart-cont{
