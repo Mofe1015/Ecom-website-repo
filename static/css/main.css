@@ -87,6 +87,21 @@ h1,h2,h3,h4,h5,h6{
 	margin-left: 10px;
 
 }
+.checkout-cont1{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+	max-width: 100%;
+	height: 666px;
+	margin-left: 10px;
+	overflow-y: scroll; 
+	
+
+}
+.checkout-cont1::-webkit-scrollbar {
+	display: none;
+  }
 
 .payment-cont{
 	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
@@ -181,6 +196,10 @@ h1,h2,h3,h4,h5,h6{
 
 .bg-dark{
     background-color: black!important;
+	position: fixed !important; 
+	top: 0 !important; 
+	width: 100% !important; 
+	z-index:1 !important; 
 }
 
 #cart-icon{
@@ -353,7 +372,11 @@ h1,h2,h3,h4,h5,h6{
 	margin: 0px
 }
  
-    
+.fixed{
+	position: fixed !important;
+	z-index:1 !important; 
+}
+
 
 .row-cart{
     max-width: 85% !important;
@@ -368,9 +391,14 @@ h1,h2,h3,h4,h5,h6{
 .container{
     max-width: 99% !important;
     padding: 0px !important;
-    margin: 0px !important;
+    margin-top: 50px !important;
 
 }
+ .rowscroll{
+	overflow-y: scroll !important;
+ }
+
+
 .col-lg-4{
     max-width: 25% !important;
     padding-top: 20px !important;

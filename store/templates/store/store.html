@@ -5,8 +5,9 @@
 {% block content %}
 
     <div class="box-cont">
-        <h7 class="h7"><strong>Most popular products </strong></h7>
-            <div class="row">
+        <div class="">
+            <h7 class="h7"><strong>Most popular products </strong></h7>
+            <div class="row ">
                 {% for product in products %}
 
                     <div class="col-lg-4  ">
@@ -31,9 +32,9 @@
                        </a>
                    </div>
                 {% endfor %}
-
-
+            </div>
         </div>
+        
     </div>
     <script>
         var iteminfo = document.getElementsByClassName('iteminfo')

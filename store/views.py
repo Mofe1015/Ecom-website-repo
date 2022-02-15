@@ -33,6 +33,7 @@ def itemdetails(request):
     data = json.loads(request.body)
     global productid
     productid = data['productid']
+    
     return JsonResponse('sending data', safe=False)
     
 def moreinfo(request):

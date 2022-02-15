@@ -130,11 +130,12 @@
         </div>
 
         <div class=" col-lg-5   ">
-           <div class="checkout-cont">
-               <div class="row">
-                   <h3 class="order-summary-txt">Your order summary</h3>
+           <div class="checkout-cont1">
+               <div class="row ">
+                   <h3 class="order-summary-txt ">Your order summary</h3>
                </div>
                {% for item in items %}
+                    
                    <div class="row">
                        <div class="col-lg-3 sum-col">
                            <div class="sum-col">
@@ -158,7 +159,8 @@
 
                    </div>
                {%endfor%}
-               <div class="row ttl-cont-sum">
+
+               <div class="row ttl-cont-sum ">
                     <div class="col-lg-3 ">
                         <a class="btn btn-secondary btn-sm chk-out-2" href="{% url 'cart' %}">Back to cart</a>
                     </div>
