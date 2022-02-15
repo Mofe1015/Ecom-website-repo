@@ -10,7 +10,7 @@
                 {% for product in products %}
 
                     <div class="col-lg-4  ">
-                       <a href="{% url 'itemdetails' %}">
+                       <a href="#" class="iteminfo" data-product={{product.id}} >
                            <div class="thumbnail" >
                                <img class="stock-img" src="{{product.imgURL}}">
                            </div>
@@ -35,6 +35,40 @@
 
         </div>
     </div>
+    <script>
+        var iteminfo = document.getElementsByClassName('iteminfo')
+for(var i = 0; i < iteminfo.length; i++){
+    iteminfo[i].addEventListener('click', function(){
+        console.log('productinfo')
+        var productid = this.dataset.product
+        console.log('productid:', productid)
+
+        senditeminto(productid)
+
+    })
+}
+
+function senditeminto(productid){
+   
+
+    var url = '/itemdetails/'
+
+    fetch(url, {
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json',
+            'X-CSRFToken': csrftoken,
+        },
+        body:JSON.stringify({'productid': productid})
+    })
+
+    
+    .then((data) =>{
+       console.log('data:', data)
+       window.location.href = "{% url 'itemdetails'%}"
+    })
+}
+    </script>
 {% endblock content %}
 
 
