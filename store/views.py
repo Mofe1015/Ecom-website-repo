@@ -27,6 +27,25 @@ def store(request):
     )
 
 
+def itemdetails(request):
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        items = order.orderitem_set.all()
+        cartItems = order.CartItmTtl
+    else: 
+        items = []
+        order = {'CartTtl': 0, 'CartItmTtl': 0, 'shipping': False}
+        cartItems = order['CartItmTtl']
+
+    products = Product.objects.all()
+    context = {'products': products, 'items' :items, 'order' :order, 'cartItems' : cartItems}
+    
+
+    return render(
+        request, 'store/itemdetails.html', context
+        )
+
 def cart(request):
     if request.user.is_authenticated:
         customer = request.user.customer
@@ -117,3 +136,5 @@ def processOrder(request):
     else:
         print('unregistered user')
     return JsonResponse('PAYMENT COMPLETE', safe=False)
+
+

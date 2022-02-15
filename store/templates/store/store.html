@@ -10,7 +10,7 @@
                 {% for product in products %}
 
                     <div class="col-lg-4  ">
-                       <a href="#">
+                       <a href="{% url 'itemdetails' %}">
                            <div class="thumbnail" >
                                <img class="stock-img" src="{{product.imgURL}}">
                            </div>
