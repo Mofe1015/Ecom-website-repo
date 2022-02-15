@@ -1,0 +1,10 @@
+{% extends 'store/main.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+
+{% block content %}
+
+        <img class="stock-img" src="{{product.imgURL}}">
+        <h3>{{product.name}}</h3>
+    
+{% endblock %}

@@ -1,3 +1,4 @@
+from ast import Global
 import json
 from sqlite3 import complete_statement
 from django.shortcuts import render
@@ -27,7 +28,14 @@ def store(request):
     )
 
 
+
 def itemdetails(request):
+    data = json.loads(request.body)
+    global productid
+    productid = data['productid']
+    return JsonResponse('sending data', safe=False)
+    
+def moreinfo(request):
     if request.user.is_authenticated:
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
@@ -39,12 +47,15 @@ def itemdetails(request):
         cartItems = order['CartItmTtl']
 
     products = Product.objects.all()
-    context = {'products': products, 'items' :items, 'order' :order, 'cartItems' : cartItems}
+    print(productid)
+    product = Product.objects.get(id=productid)
+    context = {'products': products, 'items' :items, 'order' :order, 'cartItems' : cartItems, 'product' :product}
+    return render(
+        request, 'store/moreinfo.html', context
+    )
     
 
-    return render(
-        request, 'store/itemdetails.html', context
-        )
+
 
 def cart(request):
     if request.user.is_authenticated:

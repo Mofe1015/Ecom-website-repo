@@ -62,10 +62,10 @@ function senditeminto(productid){
         body:JSON.stringify({'productid': productid})
     })
 
-    
+    .then((response) => response.json())
     .then((data) =>{
        console.log('data:', data)
-       window.location.href = "{% url 'itemdetails'%}"
+       window.location.href = "{% url 'moreinfo'%}"
     })
 }
     </script>

@@ -1,9 +1,1 @@
-{% extends 'store/main.html' %}
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
 
-{% block content %}
-    {% for product in products %}
-        <h3>{{product.name}}</h3>
-    {% endfor %}
-{% endblock %}
