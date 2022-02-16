@@ -4,7 +4,31 @@
 
 {% block content %}
 
-        <img class="stock-img" src="{{product.imgURL}}">
-        <h3>{{product.name}}</h3>
+        <div class="row moreinfocont">
+            <div class="col-lg-3">
+                    <div class="moreinfoimgcont">
+                        <img class="moreinfoimg" src="{{product.imgURL}}">
+                    </div>
+            </div>
+
+            <div class="col-lg-9">
+                    <div class="row">
+                            <div class="col-lg-9"> 
+                                <div class="middlecont">
+                                        <h3 class="moreinfofont">{{product.name}}</h3>
+                                </div>      
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="rightcontainer">
+                                        <h3 class="moreinfoprcfont">${{product.price}}</h3>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+
+            
     
+        </div>
+        
 {% endblock %}
