@@ -180,6 +180,7 @@ h1,h2,h3,h4,h5,h6{
 	position:relative;
     
 }
+
 .cart-itm-img-sum{
     position: absolute;
     top: 0;
@@ -503,4 +504,14 @@ h1,h2,h3,h4,h5,h6{
 	color: red;
 	font-weight: 500;
 	font-size: 20px;
+}
+
+.namecont{
+	height: 250px;
+}
+.btncont{
+	float: left !important;
+	
+	position:relative !important;
+    
 }

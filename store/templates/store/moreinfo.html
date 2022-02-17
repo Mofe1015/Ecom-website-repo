@@ -15,7 +15,13 @@
                     <div class="row">
                             <div class="col-lg-9"> 
                                 <div class="middlecont">
-                                        <h3 class="moreinfofont">{{product.name}}</h3>
+                                        <div class="row namecont">
+                                                <h3 class="moreinfofont">{{product.name}}</h3>
+                                        </div>
+
+                                        <div class="row btncont">
+                                                <a><button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-cart-btn-info">Add to cart</button></a>
+                                        </div>
                                 </div>      
                             </div>
 
@@ -31,4 +37,24 @@
     
         </div>
         
+
+        <script>
+                var cartbtn = document.getElementsByClassName('add-cart-btn-info')
+
+                for(var i = 0; i < cartbtn.length; i++){
+                        cartbtn[i].addEventListener('click', function(){
+                                var productId = this.dataset.product
+                                var action  = this.dataset.action
+                                console.log('productId:', productId, 'action:',action)
+
+                                console.log('USER:', user)
+                                if (user === 'AnonymousUser'){
+                                console.log('not logged in')
+                                }else{
+                                        updateUserOrder(productId, action)
+                                }
+
+                        })
+                }
+        </script>
 {% endblock %}
