@@ -18,16 +18,17 @@
                                         <div class="row namecont">
                                                 <h3 class="moreinfofont">{{product.name}}</h3>
                                         </div>
-
                                         
-                                                <a><button data-product={{product.id}} data-action="add" class="btn btn-primary btn-lg btn-block add-cart-btn-info">Add to cart</button></a>
-   
+                                        <a><button data-product={{product.id}} data-action="add" class="btn btn-primary btn-lg btn-block add-cart-btn-info">Add to cart</button></a>
                                 </div>      
                             </div>
 
                             <div class="col-lg-3">
                                 <div class="">
-                                        <h3 class="moreinfoprcfont">${{product.price}}</h3>
+                                        <div class="price-and-dets">
+                                                <h3 class="moreinfoprcfont">${{product.price}}</h3>
+                                        </div>
+                                        
                                         <form class="form-inline my-2 my-lg-0">
                                                 <input class="form-control mr-sm-2 zipbar" type="search" placeholder="00000-00">
                                                 <button class="btn btn-outline-success my-2 my-sm-0 zipbarbtn" type="submit">OK</button>

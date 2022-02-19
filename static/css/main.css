@@ -474,13 +474,13 @@ h6 {
 }
 
 .moreinfoprcfont {
-  color: red;
+  color: #2c2b2a;
   font-weight: 500;
   font-size: 20px;
 }
 
 .namecont {
-  height: 250px;
+  height: 300px;
 }
 .add-cart-btn-info {
   float: left !important;
@@ -504,4 +504,8 @@ h6 {
 .zipbarbtn:hover {
   background-color: #2c2b2a !important;
   color: white !important;
+}
+
+.price-and-dets {
+  height: 370px !important;
 }
