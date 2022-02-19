@@ -160,28 +160,40 @@ h6 {
   margin-top: 10%;
 }
 
-.cart-itm-img {
-  padding: 10px;
-  width: 200px;
-  height: 150px;
-}
-
 .cartthumbnail {
   padding: 10px;
   margin-left: 25px;
   position: relative;
 }
 
+.cart-itm-img {
+  padding: 10px;
+  width: 170px;
+  height: 200px;
+}
+.sum-row {
+  margin: 15px !important;
+}
+
+.sum-col {
+  margin: 0px !important;
+  padding: 0px !important;
+  position: relative;
+  padding-top: 66.59%;
+  width: 100%;
+  max-height: 150px !important;
+}
+
 .cart-itm-img-sum {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  padding: 10px;
+  width: 100px;
+  height: 120px;
+  margin-top: 20px;
 }
-.sum-col {
-  margin: 0px !important;
-  padding: 0px !important;
-}
+
 .sum-col1 {
   margin-left: 0px !important;
   padding: 0px !important;
