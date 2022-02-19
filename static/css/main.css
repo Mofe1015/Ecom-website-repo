@@ -417,9 +417,11 @@ h6 {
   height: 100%;
 }
 .add-cart-btn {
-  background-color: #e3e6e6 !important;
+  background-color: #2c2b2a !important;
+  color: white !important;
   float: bottom !important;
   border: 0px;
+  border-radius: 10px !important;
 }
 
 .add-cart-btn:hover {
@@ -427,6 +429,15 @@ h6 {
   color: white !important;
 }
 
+.quant-btn {
+  background-color: #e3e6e6 !important;
+  float: bottom !important;
+  border: 0px;
+}
+.quant-btn:hover {
+  background-color: grey !important;
+  color: white !important;
+}
 .moreinfocont {
   height: 1000px !important;
   max-width: 95% !important;
@@ -484,13 +495,17 @@ h6 {
 }
 .add-cart-btn-info {
   float: left !important;
-  margin-left: 90px !important;
   margin-top: 60px !important;
   position: relative !important;
   width: 500px !important;
   background-color: #2c2b2a !important;
   border-radius: 10px !important;
 }
+.add-cart-btn-info:hover {
+  background-color: grey !important;
+  color: black !important;
+}
+
 .zipbar {
   width: 110px !important;
   border-color: #2c2b2a !important;
@@ -498,12 +513,13 @@ h6 {
 .zipbarbtn {
   width: 50px !important;
   border-color: #2c2b2a !important;
+  background-color: #2c2b2a !important;
   border-radius: 5px !important;
-  color: #2c2b2a !important;
+  color: white !important;
 }
 .zipbarbtn:hover {
-  background-color: #2c2b2a !important;
-  color: white !important;
+  background-color: grey !important;
+  color: black !important;
 }
 
 .price-and-dets {
