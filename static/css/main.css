@@ -155,7 +155,7 @@ h6 {
   top: 0;
   left: 0;
   width: 80%;
-  height: 80%;
+  max-height: 80%;
   margin-left: 10%;
   margin-top: 10%;
 }
@@ -168,8 +168,8 @@ h6 {
 
 .cart-itm-img {
   padding: 10px;
-  width: 170px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 }
 .sum-row {
   margin: 15px !important;
@@ -184,14 +184,19 @@ h6 {
   max-height: 150px !important;
 }
 
+.check-out-img-col {
+  max-width: 50px;
+}
+
 .cart-itm-img-sum {
   position: absolute;
   top: 0;
   left: 0;
   padding: 10px;
   width: 100px;
-  height: 120px;
-  margin-top: 20px;
+  height: 100px;
+  margin-top: 10px;
+  overflow: hidden;
 }
 
 .sum-col1 {
@@ -439,7 +444,7 @@ h6 {
   color: white !important;
 }
 .moreinfocont {
-  max-height: 500px !important;
+  height: 500px !important;
   max-width: 95% !important;
   margin: auto !important;
   margin-top: 40px !important;
@@ -454,6 +459,9 @@ h6 {
 .moreinfoimagecol {
   height: 400px;
   max-height: 400px !important;
+}
+.center {
+  padding: 10px 10px;
 }
 
 .moreinfoimgcont {
