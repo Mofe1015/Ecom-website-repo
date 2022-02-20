@@ -451,19 +451,24 @@ h6 {
   border-radius: 4px;
 }
 
+.moreinfoimagecol {
+  height: 400px;
+  max-height: 400px !important;
+}
+
 .moreinfoimgcont {
   position: relative;
   padding: auto;
   padding-top: 66.59%;
-
+  max-width: 100% !important;
+  max-height: 100% !important;
   width: 400px;
   height: 400px;
-  overflow: hidden;
 }
 
 .moreinfoimg {
   position: absolute;
-  top: 0;
+  top: 20px;
   align-self: center;
   max-width: 100%;
   max-height: 100%;
@@ -533,9 +538,4 @@ h6 {
   padding: 0px !important;
   margin-left: -20px !important;
   margin-right: 20px !important;
-}
-
-.moreinfoimagecol {
-  align-self: center !important;
-  align-items: center !important;
 }
