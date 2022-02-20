@@ -5,7 +5,7 @@
 {% block content %}
 
         <div class="row moreinfocont">
-            <div class="col-lg-3">
+            <div class="col-lg-3 moreinfoimagecol">
                     <div class="moreinfoimgcont">
                         <img class="moreinfoimg" src="{{product.imgURL}}">
                     </div>
@@ -18,12 +18,14 @@
                                         <div class="row namecont">
                                                 <div class="col-lg-12">
                                                         <div class="row">
-                                                                <h3 class="moreinfofont">{{product.name}}</h3>
+                                                                <h3 class="moreinfofont">{{product.name}}</h3>    
+                                                        </div>
+                                                        <div class="row">
+                                                                <p><strong>About this item</strong> </p>
                                                         </div>
                                                         
-                                                        <div class="row ">
-                                                                <ul>
-                                                                        <p><strong>About this item</strong> </p>
+                                                        <div class="row aboutitmlist ">
+                                                                <ul> 
                                                                         <li>Donec id leo pharetra leo iaculis lobortis.</li>
                                                                         <li>Suspendisse sed purus sit amet risus blandit feugiat sed non lectus.</li>
                                                                         <li>Suspendisse eget dui in velit posuere maximus eget vitae turpis.</li>
