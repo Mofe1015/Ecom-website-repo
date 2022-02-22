@@ -539,11 +539,24 @@ h6 {
 }
 
 .price-and-dets {
-  height: 370px !important;
+  padding-left: 70px;
 }
 .aboutitmlist {
   margin: 0px !important;
   padding: 0px !important;
   margin-left: -20px !important;
   margin-right: 20px !important;
+}
+
+.price-and-ratings {
+  margin-top: 20px;
+  margin-left: 0px;
+  height: 360px !important;
+}
+
+.ratingsimg {
+  width: 150px;
+}
+.ratingsimgcont {
+  margin-left: 30px;
 }
