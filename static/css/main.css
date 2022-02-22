@@ -570,3 +570,7 @@ h6 {
   height: 70px;
   width: 70px;
 }
+.addtofavbtn {
+  border: none;
+  background-color: transparent;
+}
