@@ -574,3 +574,18 @@ h6 {
   border: none;
   background-color: transparent;
 }
+.sharebtn {
+  border: none;
+  background-color: transparent;
+  float: right;
+}
+.shareimg {
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.shareimg:hover {
+  height: 50px;
+  width: 50px;
+}
