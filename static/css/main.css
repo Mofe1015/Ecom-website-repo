@@ -539,7 +539,8 @@ h6 {
 }
 
 .price-and-dets {
-  padding-left: 70px;
+  padding-top: 20px;
+  padding-left: 25px;
 }
 .aboutitmlist {
   margin: 0px !important;
@@ -559,4 +560,13 @@ h6 {
 }
 .ratingsimgcont {
   margin-left: 30px;
+}
+.addfavimg {
+  height: 60px;
+  width: 60px;
+  margin-left: 10px;
+}
+.addfavimg:hover {
+  height: 70px;
+  width: 70px;
 }
