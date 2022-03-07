@@ -5,6 +5,10 @@
 <img src="gitimages/cartimg.png" width="100%" margin-bottom = "40px" >
 <img src="gitimages/checkoutimg.png" width="100%" margin-bottom = "40px" >
 
+## VIDEO PREVIEW!!
+https://user-images.githubusercontent.com/70088500/157100989-d58face4-1cb1-4af8-9293-e97729fc4811.mov
+
+
 ## Check out my latest project >> [ ECOM WEB-APP](https://github.com/Mofe1015/Ecom-website-repo)
 
 This ia a Ecommerce website made with DJANGO, PYTHON, JAVASCRIPT, CSS, HTML. The goal is to implement the Django framework for large scale Ecom Web applications, By creating a personal database for products, completion and placement of orders
@@ -28,6 +32,7 @@ So far, Cart Functionality , Order Placement and a couple database features (usi
 
 ## Contribution 🍕🗺
 
+
 Feature requests, issues, pull requests and questions are welcome.
 
 ## Bugs 😭🐛
@@ -36,3 +41,7 @@ If you encounter any bugs or are facing any issues with the code, please don't h
 email : mofeomotosho@gmail.com
 
 ### MOFE
+
+
+
+
