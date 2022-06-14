@@ -5,7 +5,7 @@
 <img src="gitimages/cartimg.png" width="100%" margin-bottom = "40px" >
 <img src="gitimages/checkoutimg.png" width="100%" margin-bottom = "40px" >
 
-## VIDEO PREVIEW!!
+## VIDEO PREVIEW!!!
 
 https://user-images.githubusercontent.com/70088500/157100989-d58face4-1cb1-4af8-9293-e97729fc4811.mov
 
@@ -40,7 +40,7 @@ Feature requests, issues, pull requests and questions are welcome.
 
 If you encounter any bugs or are facing any issues with the code, please don't hesitate to reach out to me.
 
-email : mofeomotosho@gmail.com
+email : mofeomotosho8@gmail.com
 
 ### MOFE
 
